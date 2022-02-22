@@ -1,0 +1,30 @@
+name: "Update Note"
+
+on:
+  workflow_dispatch:
+    inputs:
+      note_id:
+        required: true
+        description: "Note ID"
+      note:
+        default: "..."
+        required: true
+        description: "Note"
+
+jobs:
+  adding:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "actions/checkout@v2"
+
+      - uses: "actions/setup-node@v2"
+        with:
+          node-version: 16
+
+      - run: "npm ci"
+
+      - run: "node ./src/update-note.mjs"
+        env:
+          NOTE_ID: "${{ github.event.inputs.note_id }}"
+          NOTE: "${{ github.event.inputs.note }}"
+          GITHUB_TOKEN: "${{ github.token }}"
