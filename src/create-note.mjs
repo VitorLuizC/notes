@@ -5,7 +5,7 @@ async function run() {
   await updateNotes("➕ add new note", (notes) => {
     const newNote = {
       id: v4(),
-      note: process.env.NOTE,
+      content: process.env.NOTE,
       createdAt: new Date().toISOString(),
     };
 

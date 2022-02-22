@@ -9,7 +9,7 @@ async function run() {
 
       return {
         ...note,
-        note: process.env.NOTE,
+        content: process.env.NOTE,
         updatedAt: new Date().toISOString(),
       };
     });

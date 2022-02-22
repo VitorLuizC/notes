@@ -7,7 +7,7 @@ const FILE_PATH = 'data.json';
 /**
  * @typedef {Object} Note
  * @property {string} id - An UUID.
- * @property {string} note
+ * @property {string} content
  * @property {string} createdAt - Date in ISO 8601.
  * @property {string} [updatedAt] - Date in ISO 8601.
  */
