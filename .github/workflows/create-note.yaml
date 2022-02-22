@@ -1,0 +1,23 @@
+name: "Create Note"
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        default: "..."
+        required: true
+        description: "Note"
+
+jobs:
+  adding:
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "actions/checkout@v2"
+
+      - uses: "actions/setup-node@v2"
+        with:
+          node-version: 16
+
+      - run: "node ./src/create-note.mjs"
+        env:
+          NOTE: "${{ github.event.inputs.note }}"
