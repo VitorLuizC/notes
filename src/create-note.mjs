@@ -32,7 +32,10 @@ async function run() {
     repo: process.env.GITHUB_REPOSITORY.replace(owner + '/', ''),
     path: 'data.json',
     branch: repository.data.default_branch,
-    author: process.env.GITHUB_ACTOR,
+    author: {
+      name: 'github-actions',
+      email: 'github-actions@github.com'
+    },
     content: Buffer.from(JSON.stringify(data)).toString('base64'),
     message: '🗃️ update data.json',
   });
