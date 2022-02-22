@@ -41,10 +41,6 @@ async function updateNotes(message, update) {
     message,
     sha: content.data.sha,
     path: FILE_PATH,
-    author: {
-      name: 'github-actions',
-      email: 'github-actions@github.com'
-    },
     content: toBase64(update(fromBase64(content.data.content))),
   });
 }
