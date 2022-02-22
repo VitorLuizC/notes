@@ -1,7 +1,1 @@
-[
-  {
-    "id": "72524ed2-c95e-4f8e-9213-514a9f2cb4eb",
-    "content": "Hello world!",
-    "createdAt": "2022-02-21T22:38:08.908Z"
-  }
-]
+[{"id":"72524ed2-c95e-4f8e-9213-514a9f2cb4eb","content":"Hello world!","createdAt":"2022-02-21T22:38:08.908Z"},{"id":"649f4b49-1c13-4a09-b5b0-44de67bd082a","note":"Wild NOTE appeared!","createdAt":"2022-02-22T05:30:22.204Z"}]
